@@ -23,3 +23,10 @@ print(list1)
 print(list1[1])
 
 # print(list1[10])
+
+list4 = [1, 2, 3, "butt", "pancakes", "ass", "dud", "poop", "penis"]
+print(list4[3:8])
+print(len(list4))
+print(list4[0:9:2])
+print(list4[1:9:2])
+print(list4.index("butt"))
