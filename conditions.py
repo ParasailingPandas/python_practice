@@ -1,7 +1,7 @@
-# if input("wassup? ")=="nuthin much":
-#     print("ahoy")
-# elif input("holo? ")=="roar":
-#     print("nuh uh")
+if input("wassup? ")=="nuthin much":
+    print("ahoy")
+elif input("holo? ")=="roar":
+    print("nuh uh")
 
 holo = 12345
 butt = 54321

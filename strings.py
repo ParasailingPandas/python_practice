@@ -5,7 +5,7 @@ print(holo.count("o"))
 print(holo[1:4:2])
 print(holo[::-1])
 print(holo.upper())
-print(holo.startswith("penis"), holo.endswith("lo"))
+print(holo.startswith("roar"), holo.endswith("lo"))
 
 fart = "poop fumes"
 birb = fart.split(" ")
