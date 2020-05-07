@@ -8,9 +8,13 @@
 
 
 def isPalindrome(num):
-    # write your code here
-    return True # or False
+    num = str(num)
+    if num[::-1] == num:
+        return True 
+    else:
+        return False 
 
-isPalindrome("121")
-isPalindrome("001")
-isPalindrome("2")
+print(isPalindrome("121"))
+print(isPalindrome("001"))
+print(isPalindrome("2"))
+print(isPalindrome(121))
