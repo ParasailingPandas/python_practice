@@ -5,3 +5,13 @@ for val in list1:
     if val == butt:
         print(val)
         
+list1 = [4,5,6,7]
+print("method 1:")
+for val in list1:
+    print(val)
+
+print("method 2:")
+for i in range(len(list1),2):
+    print(list1[i])
+
+range(4)
