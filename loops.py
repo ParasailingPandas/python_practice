@@ -11,7 +11,7 @@ for val in list1:
     print(val)
 
 print("method 2:")
-for i in range(len(list1),2):
+for i in range(2,len(list1)):
     print(list1[i])
 
 range(4)
