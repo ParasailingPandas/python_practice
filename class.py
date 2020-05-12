@@ -16,8 +16,8 @@ class car:
         return self.color
 
     def description(self): 
-        print("This car has", self.wheels, "wheels")
+        return "This car has " + str(self.wheels) + " wheels"
 
 mycar = car(6,1,"purple","slow","fat")
-mycar.description()
+print(mycar.description())
 print(mycar.get_color())
