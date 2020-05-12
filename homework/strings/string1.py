@@ -24,8 +24,11 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
-  return
+  if count >= 10:
+    a = "many"
+  else:
+    a = count 
+  return "Number of donuts: " + str(a)
 
 
 # B. both_ends
@@ -34,8 +37,12 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-  # +++your code here+++
-  return
+  if len(s) < 2:
+    return ""
+  else:
+    a = s[0:2]
+    b = s[len(s)-2:len(s)]
+    return a + b
 
 
 # C. fix_start
@@ -47,9 +54,19 @@ def both_ends(s):
 # Assume that the string is length 1 or more.
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
+
+# def fix_start(s):
+#   stra = s[0]
+#   strb = "*"
+#   s_modified = s.replace(stra, strb)
+#   return s[0] + s_modified[1:len(s_modified)]
+
 def fix_start(s):
-  # +++your code here+++
-  return
+  a = s[0]
+  for b in range(1,len(s)):
+    if s[b] == a:
+      s = s[0:b] + "*" + s[b+1:len(s)] 
+  return s
 
 
 # D. MixUp
@@ -60,8 +77,8 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
+  new = b[0:2] + a[2:len(a)] + " " + a[0:2] + b[2:len(b)] 
+  return new 
 
 
 # Provided simple test() function used in main() to print
@@ -71,13 +88,13 @@ def test(got, expected):
     prefix = ' OK '
   else:
     prefix = '  X '
-  print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
+  print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
 
 # Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
 def main():
-  print 'donuts'
+  print('donuts')
   # Each line calls donuts, compares its result to the expected for that call.
   test(donuts(4), 'Number of donuts: 4')
   test(donuts(9), 'Number of donuts: 9')
@@ -85,7 +102,7 @@ def main():
   test(donuts(99), 'Number of donuts: many')
 
   print
-  print 'both_ends'
+  print("both_ends")
   test(both_ends('spring'), 'spng')
   test(both_ends('Hello'), 'Helo')
   test(both_ends('a'), '')
@@ -93,14 +110,14 @@ def main():
 
   
   print
-  print 'fix_start'
+  print('fix_start')
   test(fix_start('babble'), 'ba**le')
   test(fix_start('aardvark'), 'a*rdv*rk')
   test(fix_start('google'), 'goo*le')
   test(fix_start('donut'), 'donut')
 
   print
-  print 'mix_up'
+  print( 'mix_up')
   test(mix_up('mix', 'pod'), 'pox mid')
   test(mix_up('dog', 'dinner'), 'dig donner')
   test(mix_up('gnash', 'sport'), 'spash gnort')
