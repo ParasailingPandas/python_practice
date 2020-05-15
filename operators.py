@@ -1,6 +1,6 @@
 heh = 1+2*8/12
 print(heh)
-butt = 12%5
+butt = 13%5
 print(butt)
 poop = 2**4
 print(poop)
@@ -16,3 +16,11 @@ list3 = list1 + list2
 print(list3)
 
 print(list3*2)
+
+print(5/2)
+print(4/2)
+a = 5
+b = 2
+print(a/b)
+
+print(a//b)
