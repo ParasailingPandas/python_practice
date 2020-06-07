@@ -1,5 +1,5 @@
 class car: 
-    wheels = 4
+    wheels                           = 4
     seats = 5
     color = "red"
     speed = "fast"
@@ -21,3 +21,6 @@ class car:
 mycar = car(6,1,"purple","slow","fat")
 print(mycar.description())
 print(mycar.get_color())
+
+yourcar = car(44,0,"orange","slow","fat")
+print(yourcar.description())
